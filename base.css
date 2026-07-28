@@ -1,0 +1,50 @@
+/* Foundation: design tokens, reset and shared typography. */
+:root {
+  --blue: #385cad;
+  --blue-deep: #213970;
+  --red: #e43d30;
+  --gold: #cc9f53;
+  --gold-light: #f6d180;
+  --ink: #172033;
+  --muted: #5e6b80;
+  --paper: #f6f7fa;
+  --line: #d9dee8;
+  --white: #fff;
+  --shadow: 0 18px 45px rgba(25, 44, 83, .1);
+  --radius: 8px;
+  --font-display: "Montserrat", sans-serif;
+  --font-body: "Open Sans", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body { margin: 0; min-width: 320px; overflow-x: hidden; color: var(--ink); background: var(--white); font: 400 16px/1.65 var(--font-body); }
+body:has(dialog[open]) { overflow: hidden; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3, h4, h5, h6, .overline, .eyebrow { font-family: var(--font-display); letter-spacing: -.025em; }
+h1 { font-size: clamp(2.5rem, 5vw, 3rem); font-weight: 700; line-height: 1.12; }
+h2 { color: var(--blue-deep); font-size: clamp(2rem, 3.8vw, 2.25rem); font-weight: 700; line-height: 1.2; }
+h3 { margin-bottom: .55rem; font-size: clamp(1.35rem, 2.6vw, 1.75rem); font-weight: 600; line-height: 1.3; }
+h4 { font-size: 1.375rem; font-weight: 600; line-height: 1.35; }
+h5, h6 { font-size: 1rem; font-weight: 600; line-height: 1.4; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+button, input, select, textarea { font-family: var(--font-body); }
+button { cursor: pointer; }
+img { display: block; max-width: 100%; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+::selection { color: var(--blue-deep); background: var(--gold-light); }
+.container { width: min(1180px, calc(100% - clamp(32px, 5vw, 64px))); margin-inline: auto; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.skip-link { position: fixed; z-index: 20; top: 8px; left: 8px; padding: .65rem .85rem; color: var(--white); background: var(--blue-deep); transform: translateY(-160%); transition: transform .2s ease; }
+.skip-link:focus { transform: translateY(0); }
+.overline { margin-bottom: 1rem; color: rgba(255,255,255,.78); font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.overline--blue { color: var(--blue); }
+.overline--gold { color: var(--gold); }
+.lead { font-size: 1.18rem; line-height: 1.65; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Shared Fund performance ticker. */
+.fund-ticker{overflow:hidden;background:#f6d180;color:#000;border-bottom:1px solid rgba(33,57,112,.18)}.fund-ticker__track{display:flex;width:max-content;will-change:transform;animation:fund-ticker-scroll 34s linear infinite}.fund-ticker__set{display:flex;flex:none;align-items:center;min-width:100vw}.fund-ticker__item{display:inline-flex;align-items:center;gap:.65rem;flex:none;padding:.38rem clamp(1.5rem,4vw,3.5rem);white-space:nowrap;font:400 .68rem var(--font-display);letter-spacing:.01em}.fund-ticker__item i{width:6px;height:6px;flex:none;border-radius:50%;background:#e43d30}.fund-ticker:hover .fund-ticker__track,.fund-ticker:focus-within .fund-ticker__track{animation-play-state:paused}@keyframes fund-ticker-scroll{to{transform:translateX(-50%)}}@media(max-width:500px){.fund-ticker__item{gap:.55rem;padding:.34rem 1.5rem;font-size:.64rem}}@media(prefers-reduced-motion:reduce){.fund-ticker__track{animation:none;width:100%;overflow-x:auto}.fund-ticker__set[aria-hidden="true"]{display:none}}

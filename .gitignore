@@ -1,0 +1,10 @@
+# Local agent, editor and browser debug state
+.agents/
+.vscode/
+
+# Generated previews and downloaded reference pages
+tmp/
+
+# Operating-system files
+Thumbs.db
+.DS_Store

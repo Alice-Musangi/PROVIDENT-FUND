@@ -1,0 +1,111 @@
+/* Final shared refinement: institutional colour, type and interaction system. */
+:root {
+  --blue: #385cad;
+  --blue-deep: #213970;
+  --red: #e43d30;
+  --gold: #cc9f53;
+  --gold-light: #f6d180;
+  --ink: #172033;
+  --muted: #5e6b80;
+  --paper: #f6f7fa;
+  --line: #d9dee8;
+  --shadow: 0 16px 38px rgba(25, 44, 83, .09);
+}
+
+html { scroll-padding-top: 96px; }
+body { background: #fbfcfb; font-family: var(--font-body); }
+h1, h2, h3, h4, h5, h6, .overline, .eyebrow,
+.main-nav a, .nav-dropdown summary, .button--primary, .button--outline,
+.button--gold, .resource-card__type, .trustee-card__role, .provider-card small,
+.pillar-number, .strategy-download-card strong { font-family: var(--font-display); }
+
+/* Shared hierarchy and spacing. */
+p { margin-bottom: 1rem; }
+.lead { font-size: clamp(1.0625rem, 1.8vw, 1.1875rem); line-height: 1.7; }
+.overline, .eyebrow { font-weight: 700; letter-spacing: .11em; }
+.overline--blue, .eyebrow { color: var(--blue); }
+.overline--gold { color: var(--gold); }
+.section, .subpage-section { padding-block: clamp(4rem, 8vw, 6.5rem); }
+.section-intro, .page-intro { margin-bottom: clamp(2rem, 4vw, 3.25rem); }
+
+/* Elegant, understated global chrome. */
+.utility-bar { color: #dfe8fc; background: var(--blue-deep); }
+.utility-bar__link { color: var(--gold-light) !important; }
+.site-header { background: rgba(255, 255, 255, .98); }
+.site-header.is-scrolled { border-color: var(--line); box-shadow: 0 8px 28px rgba(25, 44, 83, .08); }
+.brand { color: var(--blue-deep); }
+.main-nav a, .nav-dropdown summary { color: #3f4a5b; font-size: .82rem; font-weight: 600; letter-spacing: .01em; }
+.main-nav a::after { background: var(--gold); }
+.footer { color: #dce9e1; background: var(--blue-deep); }
+.footer h3, .footer a:hover { color: var(--gold-light); }
+
+/* Components: consistent surfaces, controls and feedback. */
+.button { min-height: 48px; border-radius: 6px; font-family: var(--font-body); font-size: 1rem; font-weight: 500; letter-spacing: 0; }
+.button--primary { background: var(--blue); }
+.button--primary:hover { background: var(--blue-deep); }
+.button--gold { color: #403111; background: var(--gold-light); }
+.button--gold:hover { color: var(--white); background: var(--blue); }
+.button--outline { color: var(--blue); border-color: var(--blue); }
+.button--outline:hover { background: var(--blue); }
+.text-link, .profile-contact, .resource-button { color: var(--blue); }
+.text-link:hover, .profile-contact:hover, .resource-button:hover { color: var(--blue-deep); }
+.service-card, .provider-card, .trustee-card, .metric-card, .performance-chart,
+.allocation-card, .profile-card, .benefit-card, .download-centre, .request-form,
+.booking-form, .strategy-glance-pillar, .strategy-download-card {
+  border-color: var(--line);
+  box-shadow: 0 10px 28px rgba(25, 44, 83, .055);
+}
+.service-card, .provider-card, .trustee-card, .benefit-card, .strategy-glance-pillar { border-radius: 10px; }
+.service-card:hover, .provider-card:hover, .benefit-card:hover, .strategy-glance-pillar:hover,
+.strategy-download-card:hover { border-color: rgba(181, 139, 59, .72); box-shadow: var(--shadow); transform: translateY(-3px); }
+.contact-form, .request-form, .booking-form { background: var(--paper); }
+.contact-form input, .contact-form select, .contact-form textarea { border-color: #bbc4d2; border-radius: 5px; }
+.contact-form input:focus, .contact-form select, .contact-form textarea:focus { border-color: var(--blue); outline-color: rgba(56, 92, 173, .16); }
+
+/* Main-page refinement. */
+.hero { background: linear-gradient(118deg, #213970 0%, #385cad 48%, #e43d30 82%, #cc9f53 125%); }
+.hero::before { background: rgba(246, 209, 128, .13); }
+.hero::after { border-color: rgba(228, 61, 48, .16); }
+.hero__pattern { border-color: rgba(33, 57, 112, .22); }
+.hero .overline { color: #403111; background: var(--gold-light); }
+.hero .text-link { color: var(--gold-light); }
+.hero .text-link:hover { color: var(--white); }
+.hero__intro { font-family: var(--font-body); font-weight: 400; }
+.hero-card { border: 0; border-radius: 0; background: transparent; box-shadow: none; backdrop-filter: none; }
+.hero-card::before { display: none; }
+.hero-card__emblem { filter: drop-shadow(0 12px 15px rgba(71, 20, 33, .25)); }
+.services { background: linear-gradient(120deg, var(--blue-deep), var(--blue)); }
+.snapshot { background: var(--gold-light); }
+.dashboard { background: linear-gradient(180deg, #f3f6fc, #fff); }
+.allocation-donut { background: conic-gradient(var(--blue-deep) 0 42%, var(--gold) 42% 70%, #7d9bd7 70% 90%, #dce5f8 90%); }
+
+/* Subpages use the same institutional language. */
+.subpage-hero { background: linear-gradient(115deg, #213970, #385cad 58%, #e43d30); }
+.subpage-hero p:not(.overline), .breadcrumb { color: #eef2ff; }
+.subpage-hero__stamp { border-color: rgba(255, 255, 255, .22); background: rgba(255, 255, 255, .09); }
+.subpage-hero__stamp strong, .subpage-hero .overline { color: var(--gold-light); }
+.trustee-photo { background: linear-gradient(135deg, #385cad, #213970); }
+.trustee-card:nth-child(2) .trustee-photo { background: linear-gradient(135deg, #e43d30, #cc9f53); }
+.trustee-card:nth-child(3) .trustee-photo { background: linear-gradient(135deg, #385cad, #e43d30); }
+.trustee-card:nth-child(4) .trustee-photo { background: linear-gradient(135deg, #213970, #cc9f53); }
+.provider-note { border-color: var(--red); background: #fff5f3; }
+.strategy-vision-card { background: linear-gradient(125deg, #213970 0%, #385cad 55%, #e43d30 100%); }
+.strategy-values { background: var(--blue-deep); }
+.strategy-download { background: linear-gradient(180deg, #fff, #f4f7f4); }
+.strategy-download-card__icon { background: var(--blue); }
+.strategy-glance-pillar:nth-child(2) .pillar-icon { color: var(--blue-deep); background: #e7f1eb; }
+.strategy-glance-pillar:nth-child(5) .pillar-icon { background: var(--gold); }
+
+/* Original Strategy at a Glance PDF, presented without altering its artwork. */
+.strategy-glance-document { max-width: 760px; margin: 0 auto clamp(2.5rem, 5vw, 4rem); }
+.strategy-glance-document img { display: block; width: 100%; height: auto; border: 1px solid var(--line); background: var(--white); box-shadow: var(--shadow); }
+.strategy-glance-document figcaption { margin-top: .75rem; color: var(--muted); font-size: .875rem; text-align: center; }
+
+@media (max-width: 850px) {
+  .main-nav { box-shadow: 0 12px 24px rgba(0, 61, 44, .08); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card:hover, .provider-card:hover, .benefit-card:hover, .strategy-glance-pillar:hover,
+  .strategy-download-card:hover { transform: none; }
+}

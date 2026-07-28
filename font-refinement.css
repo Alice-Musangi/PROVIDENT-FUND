@@ -1,0 +1,147 @@
+/* Editorial hierarchy: readable Open Sans body copy with confident Montserrat headings. */
+body{font-weight:400;font-synthesis:none}
+h1,h2{font-weight:700!important}
+h3,h4,h5,h6{font-weight:600!important}
+body{letter-spacing:.002em}
+.navigation a,.main-nav a,.nav-dropdown summary{letter-spacing:0}
+.button,.text-link,.news-card__link,.news-card button{letter-spacing:0}
+.hero__grid--single{grid-template-columns:minmax(0,760px)}
+
+/* Expanded values story */
+.values-detail{padding-top:clamp(4rem,7vw,6rem);scroll-margin-top:110px}
+.values-detail__intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:1rem 5rem;align-items:start;margin-bottom:2.4rem}
+.values-detail__intro .kicker{grid-column:1}
+.values-detail__intro h2{grid-column:1;max-width:520px;margin:0}
+.values-detail__intro>p:last-child{grid-column:2;grid-row:1/3;max-width:540px;margin:1.8rem 0 0;color:var(--muted)}
+.values-detail__grid{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.values-detail__grid article{position:relative;grid-column:span 2;min-height:390px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;overflow:hidden;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.values-detail__grid article::after{position:absolute;right:0;bottom:0;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--green));content:"";transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.values-detail__grid article:hover{z-index:1;border-color:transparent;box-shadow:0 18px 38px rgba(33,57,112,.12);transform:translateY(-6px)}
+.values-detail__grid article:hover::after{transform:scaleX(1)}
+.values-detail__grid article:nth-child(4){grid-column:2/span 2}
+.values-detail__grid article:nth-child(5){grid-column:4/span 2}
+.values-detail__grid figure{height:145px;margin:0;overflow:hidden;background:var(--green-soft)}
+.values-detail__grid img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.82) contrast(.96);transform:scale(1.01);transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .4s ease}
+.values-detail__grid article:hover img{transform:scale(1.065);filter:saturate(1) contrast(1)}
+.values-detail__content{padding:1.45rem 1.7rem 1.7rem}
+.values-detail__grid span{display:inline-block;color:var(--gold);font:600 .72rem var(--font-display);letter-spacing:.1em;transition:color .3s ease,transform .3s ease}
+.values-detail__grid article:hover span{color:var(--green);transform:translateX(5px)}
+.values-detail__grid h3{margin:1.15rem 0 .7rem}
+.values-detail__grid p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.7}
+@media(max-width:820px){
+  .values-detail__intro{grid-template-columns:1fr;gap:1rem}
+  .values-detail__intro .kicker,.values-detail__intro h2,.values-detail__intro>p:last-child{grid-column:1;grid-row:auto}
+  .values-detail__intro>p:last-child{margin:0}
+  .values-detail__grid{grid-template-columns:1fr 1fr}
+  .values-detail__grid article,.values-detail__grid article:nth-child(4),.values-detail__grid article:nth-child(5){grid-column:auto;min-height:0}
+}
+@media(max-width:520px){.values-detail__grid{grid-template-columns:1fr}}
+.values-motion-ready .values-detail__intro,.values-motion-ready .values-detail__grid article{opacity:0;transform:translateY(24px)}
+.values-motion-ready.is-visible .values-detail__intro{opacity:1;transform:none;transition:opacity .65s ease,transform .65s ease}
+.values-motion-ready.is-visible .values-detail__grid article{opacity:1;transform:none;transition:opacity .55s ease,transform .55s ease,box-shadow .35s ease,border-color .35s ease}
+.values-motion-ready.is-visible .values-detail__grid article:nth-child(2){transition-delay:.08s}
+.values-motion-ready.is-visible .values-detail__grid article:nth-child(3){transition-delay:.16s}
+.values-motion-ready.is-visible .values-detail__grid article:nth-child(4){transition-delay:.24s}
+.values-motion-ready.is-visible .values-detail__grid article:nth-child(5){transition-delay:.32s}
+.values-motion-ready.is-visible .values-detail__grid article:hover{transform:translateY(-6px)}
+@media(prefers-reduced-motion:reduce){
+  .values-detail__grid article,.values-detail__grid article::after,.values-detail__grid img,.values-detail__grid span{transition:none!important}
+  .values-detail__grid article:hover,.values-detail__grid article:hover img,.values-detail__grid article:hover span{transform:none}
+}
+
+/* Provident fund essentials */
+.fund-basics{position:relative;overflow:hidden;background:var(--green-deep);color:#dfe7f8}
+.fund-basics::before{position:absolute;right:-12rem;top:-18rem;width:34rem;height:34rem;border:1px solid rgba(246,209,128,.16);border-radius:50%;content:"";pointer-events:none}
+.fund-basics .section-head{position:relative}
+.fund-basics .section-head h2{color:#fff}
+.fund-basics .section-head>p{color:#cbd6ed}
+.fund-basics__grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.2);border-left:1px solid rgba(255,255,255,.2)}
+.fund-basics__grid article{min-height:325px;padding:1.6rem;border-right:1px solid rgba(255,255,255,.2);border-bottom:1px solid rgba(255,255,255,.2);transition:background-color .3s ease,transform .3s ease}
+.fund-basics__grid article:hover{background:rgba(255,255,255,.07);transform:translateY(-4px)}
+.fund-basics__grid span{color:var(--gold-pale);font:600 .72rem var(--font-display);letter-spacing:.1em}
+.fund-basics__grid h3{margin:2.4rem 0 .85rem;color:#fff;font-size:1.13rem;line-height:1.35}
+.fund-basics__grid p{margin:0;color:#cbd6ed;font-size:.88rem;line-height:1.7}
+.fund-basics__grid .fund-basics__note{margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.16);color:var(--gold-pale);font-size:.76rem}
+.fund-basics__footer{position:relative;display:flex;align-items:center;justify-content:space-between;gap:2rem;padding-top:1.5rem}
+.fund-basics__footer p{max-width:730px;margin:0;color:#aebddb;font-size:.76rem}
+.fund-basics__footer .text-link{flex:none;color:var(--gold-pale)}
+.fund-basics__footer .text-link:hover{color:#fff}
+@media(max-width:900px){.fund-basics__grid{grid-template-columns:1fr 1fr}.fund-basics__grid article{min-height:260px}}
+@media(max-width:600px){.fund-basics__grid{grid-template-columns:1fr}.fund-basics__grid article{min-height:0}.fund-basics__footer{display:block}.fund-basics__footer .text-link{display:inline-block;margin-top:1rem}}
+@media(prefers-reduced-motion:reduce){.fund-basics__grid article{transition:none}.fund-basics__grid article:hover{transform:none}}
+.news-article-callout:has(.news-video-link){position:relative;min-height:245px;margin:2.8rem 0;padding:2.2rem 40% 2.2rem 2.2rem;overflow:hidden;border:0;border-radius:4px;background:linear-gradient(135deg,var(--green-deep),var(--green));box-shadow:0 18px 42px rgba(33,57,112,.16)}
+.news-article-callout:has(.news-video-link)::before{position:absolute;top:0;right:0;left:0;height:4px;background:linear-gradient(90deg,var(--red),var(--gold));content:"";z-index:2}
+.news-article-callout:has(.news-video-link)::after{position:absolute;top:4px;right:0;bottom:0;width:37%;background:linear-gradient(90deg,rgba(33,57,112,.35),rgba(33,57,112,0) 42%),url("assets/images/prof-gilbert-kokwaro-agm.png") 72% center/cover no-repeat;content:""}
+.news-article-callout:has(.news-video-link)>*{position:relative;z-index:1}
+.news-article-callout:has(.news-video-link)>span{margin-bottom:.75rem;color:var(--gold-pale);font-size:.72rem}
+.news-article-callout:has(.news-video-link)>p{max-width:590px;color:#fff!important;font-size:1.05rem!important;line-height:1.65!important}
+.news-video-link{min-height:52px;margin-top:1.35rem;padding:.75rem 1.15rem;border-radius:3px;background:#e43d30!important;color:#fff!important;box-shadow:0 8px 18px rgba(13,23,48,.2)}
+.news-video-link::before{display:inline-block;width:0;height:0;margin-right:.12rem;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:10px solid currentColor;content:""}
+.news-video-link:hover{background:#c92e23!important;box-shadow:0 11px 24px rgba(13,23,48,.26);transform:translateY(-2px)}
+.agm-motion-ready{opacity:0;transform:translateY(28px)}
+.agm-motion-ready::before{transform:scaleX(0);transform-origin:left}
+.agm-motion-ready::after{opacity:.35;transform:translateX(24px) scale(1.04)}
+.agm-motion-ready>span,.agm-motion-ready>p,.agm-motion-ready>.news-video-link{opacity:0;transform:translateY(14px)}
+.agm-motion-ready.is-visible{opacity:1;transform:none;transition:opacity .65s ease,transform .65s cubic-bezier(.2,.75,.25,1)}
+.agm-motion-ready.is-visible::before{transform:scaleX(1);transition:transform .8s .18s cubic-bezier(.2,.75,.25,1)}
+.agm-motion-ready.is-visible::after{opacity:1;transform:none;transition:opacity .8s .12s ease,transform 1s .12s cubic-bezier(.2,.75,.25,1)}
+.agm-motion-ready.is-visible>span,.agm-motion-ready.is-visible>p,.agm-motion-ready.is-visible>.news-video-link{opacity:1;transform:none;transition:opacity .5s ease,transform .5s cubic-bezier(.2,.75,.25,1)}
+.agm-motion-ready.is-visible>span{transition-delay:.2s}
+.agm-motion-ready.is-visible>p{transition-delay:.3s}
+.agm-motion-ready.is-visible>.news-video-link{transition-delay:.4s}
+.agm-motion-ready.is-visible>.news-video-link::before{animation:agm-play-pulse .65s .85s ease-out 2}
+@keyframes agm-play-pulse{50%{transform:scale(1.38);filter:drop-shadow(0 0 4px rgba(255,255,255,.65))}}
+@media(max-width:680px){
+  .news-article-callout:has(.news-video-link){min-height:0;padding:1.8rem;background:linear-gradient(135deg,rgba(33,57,112,.98),rgba(33,57,112,.9)),url("assets/images/prof-gilbert-kokwaro-agm.png") 72% center/cover no-repeat}
+  .news-article-callout:has(.news-video-link)::after{display:none}
+  .news-video-link{width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+  .agm-motion-ready,.agm-motion-ready::before,.agm-motion-ready::after,.agm-motion-ready>span,.agm-motion-ready>p,.agm-motion-ready>.news-video-link{opacity:1;transform:none;transition:none!important;animation:none!important}
+  .news-video-link:hover{transform:none}
+}
+
+/* AGM pictorial */
+.agm-gallery{padding:clamp(4rem,7vw,7rem) 0;background:#f5f7fb;border-top:1px solid #d8dfec}
+.agm-gallery__head{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);align-items:end;gap:3rem;margin-bottom:2rem}
+.agm-gallery__head .kicker{display:block;margin-bottom:.75rem;color:var(--gold);font:700 .74rem var(--font-display);letter-spacing:.14em;text-transform:uppercase}
+.agm-gallery__head h2{max-width:760px;margin:0;color:var(--green-deep);font-size:clamp(1.75rem,3vw,2.7rem);line-height:1.16}
+.agm-gallery__head p{max-width:430px;margin:0 0 .25rem;color:#61708b;font-size:.98rem;line-height:1.7}
+.agm-gallery__grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:175px;gap:12px}
+.agm-gallery__item{position:relative;grid-column:span 4;min-width:0;padding:0;overflow:hidden;border:0;border-radius:3px;background:#172b55;cursor:zoom-in}
+.agm-gallery__item--featured{grid-column:span 7;grid-row:span 2}
+.agm-gallery__item:nth-child(2),.agm-gallery__item:nth-child(3){grid-column:span 5}
+.agm-gallery__item img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.75,.25,1),filter .4s ease}
+.agm-gallery__item::after{position:absolute;inset:42% 0 0;background:linear-gradient(transparent,rgba(12,27,58,.82));content:"";pointer-events:none}
+.agm-gallery__item span{position:absolute;right:1rem;bottom:.85rem;left:1rem;z-index:1;color:#fff;font:600 .76rem/1.4 var(--font-display);text-align:left;letter-spacing:.01em;transform:translateY(4px);transition:transform .35s ease}
+.agm-gallery__item:hover img,.agm-gallery__item:focus-visible img{filter:saturate(1.05);transform:scale(1.035)}
+.agm-gallery__item:hover span,.agm-gallery__item:focus-visible span{transform:none}
+.agm-gallery__item:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.agm-gallery.agm-gallery-motion-ready .agm-gallery__head,.agm-gallery.agm-gallery-motion-ready .agm-gallery__item{opacity:0;transform:translateY(22px)}
+.agm-gallery.agm-gallery-motion-ready.is-visible .agm-gallery__head,.agm-gallery.agm-gallery-motion-ready.is-visible .agm-gallery__item{opacity:1;transform:none;transition:opacity .6s ease,transform .6s cubic-bezier(.2,.75,.25,1)}
+.agm-gallery.agm-gallery-motion-ready.is-visible .agm-gallery__item:nth-child(2){transition-delay:.06s}
+.agm-gallery.agm-gallery-motion-ready.is-visible .agm-gallery__item:nth-child(3){transition-delay:.12s}
+.agm-gallery.agm-gallery-motion-ready.is-visible .agm-gallery__item:nth-child(4){transition-delay:.18s}
+.agm-gallery.agm-gallery-motion-ready.is-visible .agm-gallery__item:nth-child(5){transition-delay:.24s}
+.agm-gallery.agm-gallery-motion-ready.is-visible .agm-gallery__item:nth-child(n+6){transition-delay:.3s}
+.agm-gallery-viewer{width:min(1080px,92vw);max-width:none;padding:0;border:0;border-radius:4px;background:#0d1b38;color:#fff;box-shadow:0 30px 80px rgba(8,17,36,.42)}
+.agm-gallery-viewer::backdrop{background:rgba(7,15,31,.82);backdrop-filter:blur(5px)}
+.agm-gallery-viewer figure{margin:0}
+.agm-gallery-viewer img{display:block;width:100%;max-height:78vh;object-fit:contain;background:#08142c}
+.agm-gallery-viewer figcaption{padding:1rem 1.25rem;color:#dce4f5;font:.82rem/1.5 var(--font-body)}
+.agm-gallery-viewer__close{position:absolute;top:.8rem;right:.8rem;z-index:2;width:42px;height:42px;border:1px solid rgba(255,255,255,.45);border-radius:50%;background:rgba(10,23,49,.78);color:#fff;font-size:1.5rem;line-height:1;cursor:pointer}
+.agm-gallery-viewer__close:hover,.agm-gallery-viewer__close:focus-visible{background:var(--red);outline:none}
+@media(max-width:760px){
+  .agm-gallery__head{grid-template-columns:1fr;gap:1rem}
+  .agm-gallery__grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:190px;gap:8px}
+  .agm-gallery__item,.agm-gallery__item:nth-child(2),.agm-gallery__item:nth-child(3){grid-column:span 1}
+  .agm-gallery__item--featured{grid-column:span 2;grid-row:span 2}
+}
+@media(max-width:480px){
+  .agm-gallery__grid{grid-auto-rows:155px}
+  .agm-gallery__item--featured{grid-row:span 2}
+  .agm-gallery__item span{right:.7rem;bottom:.65rem;left:.7rem;font-size:.68rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .agm-gallery__head,.agm-gallery__item,.agm-gallery__item img,.agm-gallery__item span{opacity:1!important;transform:none!important;transition:none!important}
+}
