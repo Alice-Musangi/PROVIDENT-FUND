@@ -24,7 +24,151 @@
 body:not(.benefits-page) #benefits .benefit-details{display:none}.benefits-overview-link{padding:0 0 clamp(4.8rem,8vw,7.4rem);background:var(--mist)}
 
 /* Moving Fund performance highlights. */
-.fund-ticker{overflow:hidden;background:#f6d180;color:#000;border-bottom:1px solid rgba(33,57,112,.18)}.fund-ticker__track{display:flex;width:max-content;will-change:transform;animation:fund-ticker-scroll 34s linear infinite}.fund-ticker__set{display:flex;flex:none;align-items:center;min-width:100vw}.fund-ticker__item{display:inline-flex;align-items:center;gap:.65rem;flex:none;padding:.38rem clamp(1.5rem,4vw,3.5rem);white-space:nowrap;font:.68rem var(--font-display);letter-spacing:.01em}.fund-ticker__item i{width:6px;height:6px;flex:none;border-radius:50%;background:var(--red)}.fund-ticker:hover .fund-ticker__track,.fund-ticker:focus-within .fund-ticker__track{animation-play-state:paused}@keyframes fund-ticker-scroll{to{transform:translateX(-50%)}}@media(max-width:500px){.fund-ticker__item{gap:.55rem;padding:.34rem 1.5rem;font-size:.64rem}}@media(prefers-reduced-motion:reduce){.fund-ticker__track{animation:none;width:100%;overflow-x:auto}.fund-ticker__set[aria-hidden="true"]{display:none}}
+.fund-ticker{border-top-color:#f6d180!important;border-bottom-color:#f6d180!important;color:#f6d180!important;background:#e43d30!important;box-shadow:0 6px 18px rgba(115,25,20,.22)!important}.fund-ticker::before{background:linear-gradient(90deg,#e43d30,transparent)!important}.fund-ticker::after{background:linear-gradient(270deg,#e43d30,transparent)!important}.fund-ticker__label{color:#f6d180!important;background:rgba(91,20,20,.3)!important;border:1px solid rgba(246,209,128,.55)}.fund-ticker__item{color:#f6d180!important;text-shadow:none!important}.fund-ticker__item i{border-color:#f6d180!important;background:#f6d180!important;box-shadow:0 0 0 4px rgba(246,209,128,.18)!important}
+.fund-ticker{position:relative;overflow:hidden;border-top:2px solid var(--gold-light);border-bottom:2px solid var(--gold-light);color:#fff;background:linear-gradient(100deg,#152957 0%,var(--blue-deep) 45%,var(--blue) 100%);box-shadow:0 6px 18px rgba(20,36,76,.2)}.fund-ticker::before,.fund-ticker::after{position:absolute;z-index:2;top:0;bottom:0;width:55px;content:"";pointer-events:none}.fund-ticker::before{left:0;background:linear-gradient(90deg,#152957,transparent)}.fund-ticker::after{right:0;background:linear-gradient(270deg,var(--blue),transparent)}.fund-ticker__track{display:flex;width:max-content;will-change:transform;animation:fund-ticker-scroll 34s linear infinite}.fund-ticker__set{display:flex;flex:none;align-items:center;min-width:100vw}.fund-ticker__label{flex:none;margin-left:1rem;padding:.35rem .75rem;border-radius:999px;color:var(--blue-deep);background:var(--gold-light);font:800 .62rem var(--font-display);letter-spacing:.1em;text-transform:uppercase;box-shadow:0 3px 10px rgba(0,0,0,.18)}.fund-ticker__item{display:inline-flex;align-items:center;gap:.7rem;flex:none;padding:.58rem clamp(1.5rem,4vw,3.5rem);white-space:nowrap;font:700 .76rem var(--font-display);letter-spacing:.015em;text-shadow:0 1px 2px rgba(0,0,0,.25)}.fund-ticker__item i{width:8px;height:8px;flex:none;border:2px solid rgba(255,255,255,.65);border-radius:50%;background:var(--red);box-shadow:0 0 0 4px rgba(228,61,48,.18),0 0 10px rgba(228,61,48,.75)}.fund-ticker:hover .fund-ticker__track,.fund-ticker:focus-within .fund-ticker__track{animation-play-state:paused}@keyframes fund-ticker-scroll{to{transform:translateX(-50%)}}@media(max-width:500px){.fund-ticker__label{margin-left:.7rem;padding:.3rem .6rem;font-size:.55rem}.fund-ticker__item{gap:.55rem;padding:.5rem 1.5rem;font-size:.68rem}}@media(prefers-reduced-motion:reduce){.fund-ticker__track{animation:none;width:100%;overflow-x:auto}.fund-ticker__set[aria-hidden="true"]{display:none}}
 
 /* Higher-contrast primary navigation. */
 .navigation>a,.navigation>.nav-dropdown>summary{position:relative;padding:.72rem .32rem;color:#172033;font-size:.84rem;line-height:1.15}.navigation>a:after,.navigation>.nav-dropdown>summary:after{position:absolute;right:.32rem;bottom:.48rem;left:.32rem;height:2px;background:var(--gold);content:"";opacity:0;transform:scaleX(.45);transition:opacity .2s,transform .2s}.navigation>a:hover:after,.navigation>a:focus-visible:after,.navigation>.nav-dropdown>summary:hover:after,.navigation>.nav-dropdown>summary:focus-visible:after{opacity:1;transform:scaleX(1)}.navigation>.nav-dropdown>summary span{color:var(--gold);font-size:.9rem}@media(max-width:820px){.navigation>a,.navigation>.nav-dropdown>summary{font-size:.8rem}.navigation>a:after,.navigation>.nav-dropdown>summary:after{display:none}}
+/* Detailed 2026 group-life figures are withheld until an approved schedule is available. */
+.home-page .benefit-details {
+  display: none;
+}
+
+.fund-highlights {
+  padding: clamp(3.5rem, 6vw, 5.5rem) 0;
+  border-top: 1px solid rgba(33, 57, 112, .12);
+  border-bottom: 1px solid rgba(33, 57, 112, .12);
+  background: #f7f6f2;
+}
+
+.fund-highlights__inner {
+  display: grid;
+  grid-template-columns: minmax(250px, .7fr) minmax(0, 1.3fr);
+  gap: clamp(2.5rem, 6vw, 6.5rem);
+  align-items: start;
+}
+
+.fund-highlights__heading h2 {
+  max-width: 9ch;
+  margin: .75rem 0 1rem;
+  font-size: clamp(2.7rem, 5vw, 4.8rem);
+  line-height: .98;
+  letter-spacing: -.065em;
+}
+
+.fund-highlights__heading > p:last-child {
+  margin: 0;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.fund-highlights__graphics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  border-top: 4px solid var(--gold);
+  border-bottom: 1px solid rgba(33, 57, 112, .18);
+}
+
+.fund-highlight {
+  display: flex;
+  min-height: 178px;
+  padding: 2rem clamp(1.5rem, 3vw, 2.75rem);
+  gap: 0;
+  align-items: flex-end;
+  border: 0;
+  border-right: 1px solid rgba(33, 57, 112, .18);
+  border-radius: 0;
+  background: transparent;
+}
+
+.fund-highlight:last-child {
+  border-right: 0;
+}
+
+.fund-highlight__icon {
+  display: none;
+}
+
+.fund-highlight__icon svg {
+  width: 34px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.fund-highlight strong,
+.fund-highlight span {
+  display: block;
+}
+
+.fund-highlight strong {
+  color: var(--blue-deep);
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2.7rem, 5vw, 4.6rem);
+  font-weight: 750;
+  line-height: .9;
+  letter-spacing: -.06em;
+}
+
+.fund-highlight div > span {
+  margin-top: .9rem;
+  color: var(--muted);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.member-breakdown { grid-column: 2; padding: 0; border: 0; border-radius: 0; background: transparent; }
+.member-breakdown__heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: .8rem; }
+.member-breakdown__heading h3 { margin: 0; color: var(--blue-deep); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
+.member-breakdown__heading span { color: var(--muted); font-size: .72rem; }
+.member-breakdown__heading strong { color: var(--blue-deep); }
+.member-breakdown__grid { display: grid; grid-template-columns: repeat(8,minmax(0,1fr)); margin: 0; overflow: hidden; border-top: 1px solid rgba(33,57,112,.18); border-bottom: 1px solid rgba(33,57,112,.18); border-radius: 0; }
+.member-breakdown__grid div { padding: .85rem .35rem; text-align: left; border-right: 1px solid rgba(33,57,112,.12); }
+.member-breakdown__grid div:last-child { border-right: 0; }
+.member-breakdown__grid dt { color: var(--muted); font: 700 .58rem "Montserrat",sans-serif; letter-spacing: .08em; }
+.member-breakdown__grid dd { margin: .35rem 0 0; color: var(--blue-deep); font: 750 1rem "Montserrat",sans-serif; }
+
+@media (max-width: 900px) {
+  .member-breakdown { grid-column: 1 / -1; }
+  .member-breakdown__grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+  .member-breakdown__grid div:nth-child(4) { border-right: 0; }
+  .member-breakdown__grid div:nth-child(-n + 4) { border-bottom: 1px solid var(--line); }
+}
+
+@media (max-width: 720px) {
+  .fund-highlights__inner,
+  .fund-highlights__graphics {
+    grid-template-columns: 1fr;
+  }
+  .fund-highlight { min-height: 130px; padding: 1.5rem 0; border-right: 0; border-bottom: 1px solid rgba(33,57,112,.16); }
+  .fund-highlight:last-child { border-bottom: 0; }
+  .member-breakdown__heading { display: block; }
+  .member-breakdown__heading span { display: block; margin-top: .35rem; }
+}
+/* The public overview currently includes only approved benefit categories. */
+.home-page .benefit-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.home-page .benefit-grid article:nth-child(2),
+.home-page .benefit-grid article:nth-child(4),
+.home-page .benefit-grid article:nth-child(5) {
+  display: none;
+}
+
+@media (max-width: 820px) {
+  .home-page .benefit-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-page .benefit-grid {
+    grid-template-columns: 1fr;
+  }
+}

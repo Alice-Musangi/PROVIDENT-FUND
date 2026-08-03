@@ -61,7 +61,7 @@
     { type:"education", category:"Member education", date:"6-8 April 2026", title:"#TukoFonnaIRR: personalised retirement guidance", summary:"More than 100 members received one-to-one retirement advisory support, including a guided review of statements, contributions, IRR and AVCs.", article:"news-irr-clinic.html", imageClass:"news-card__art--irr" },
     { type:"notice", category:"AGM update", date:"22 May 2026", title:"Plan to retire in grace, not in grief", summary:"Professor Gilbert Kokwaro challenged members to approach retirement as a lifelong journey shaped by financial education, honest conversations, meaningful relationships and intentional planning.", article:"news-agm-2026.html", imageClass:"news-card__art--agm" },
     { type:"education", category:"Member education", date:"Issue 1, 2026", title:"Understanding projections and long-term planning", summary:"Retirement clinics and member forums help members explore their savings outlook and prepare informed questions." },
-    { type:"fund", category:"Fund update", date:"30 July 2026", title:"Fund reaches 1,130 active members", summary:"The Fund reported a value of over KES 3 billion while serving 1,130 active members across the SERT community." },
+    { type:"fund", category:"Fund update", date:"30 July 2026", title:"Fund reaches 1,132 active members", summary:"The Fund reported a value of over KES 3 billion while serving 1,132 active members across the SERT community." },
     { type:"notice", category:"Notice", date:"Issue 1, 2026", title:"Keep your beneficiary nomination current", summary:"Contact the Secretariat for the current approved process and form for updating your nomination details." }
   ];
   let newsFilter = "all", newsPage = 1; const newsGrid = $("#newsGrid"), newsPagination = $("#newsPagination"), perPage = 3;
@@ -77,7 +77,14 @@
   const faqList = $("#faqList"), faqSearch = $("#faqSearch"); const renderFaqs = () => { const q = faqSearch.value.trim().toLowerCase(), items = faqs.filter(item => !q || item.join(" ").toLowerCase().includes(q)); faqList.innerHTML = items.length ? items.map(([question, answer]) => `<details><summary>${question}</summary><p>${answer}</p></details>`).join("") : '<p class="empty-state">No answers match that search.</p>'; }; faqSearch.addEventListener("input", renderFaqs); renderFaqs();
 
   document.addEventListener("click", event => { const notice = event.target.closest("[data-notice]"); if (notice) showToast(`“${notice.dataset.notice}” is an illustrative preview. Official notices are issued by the Secretariat.`); const portalMessage = event.target.closest("[data-portal-toast]"); if (portalMessage) showToast(portalMessage.dataset.portalToast); });
-  $("#contactForm").addEventListener("submit", event => { event.preventDefault(); if (!event.currentTarget.checkValidity()) return event.currentTarget.reportValidity(); event.currentTarget.reset(); showToast("Thank you. Your demonstration enquiry has been confirmed locally."); });
-  const portalForm = $("#portalForm"), portalLogin = $("#portalLogin"), memberDashboard = $("#memberDashboard"); portalForm.addEventListener("submit", event => { event.preventDefault(); if (!portalForm.checkValidity()) return portalForm.reportValidity(); portalLogin.hidden = true; memberDashboard.hidden = false; }); $("#portalLogout").addEventListener("click", () => { portalForm.reset(); memberDashboard.hidden = true; portalLogin.hidden = false; showToast("You have been securely signed out of the demonstration portal."); });
+  $("#contactForm").addEventListener("submit", event => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    if (!form.checkValidity()) return form.reportValidity();
+    const data = new FormData(form);
+    const subject = `SETSPF enquiry: ${data.get("subject")}`;
+    const body = `Name: ${data.get("name")}\nEmail: ${data.get("email")}\n\n${data.get("message")}`;
+    window.location.href = `mailto:trustees@strathmore.edu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
   $("#year").textContent = new Date().getFullYear();
 })();

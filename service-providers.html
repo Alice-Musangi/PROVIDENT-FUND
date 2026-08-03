@@ -6,21 +6,70 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="base.css"><link rel="stylesheet" href="layout.css"><link rel="stylesheet" href="components.css"><link rel="stylesheet" href="enhancements.css"><link rel="stylesheet" href="governance-pages.css"><link rel="stylesheet" href="refinement.css"><link rel="stylesheet" href="chatbot.css">
   <link rel="stylesheet" href="font-refinement.css">
+  <link rel="stylesheet" href="service-providers-page.css">
 </head>
-<body>
+<body class="providers-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="utility-bar"><div class="container utility-bar__content"><a href="mailto:trustees@strathmore.edu">trustees@strathmore.edu</a><span aria-hidden="true">•</span><a href="tel:+254703034000">+254 703 034 000</a><a class="utility-bar__link" href="index.html#contact">Make an enquiry</a></div></div>
   <header class="site-header" id="siteHeader"><div class="container nav-wrap"><a class="brand" href="index.html#home" aria-label="Strathmore Educational Trust Staff Provident Fund home"><img class="brand__logo" src="fund-logo-source.png" alt="Strathmore Educational Trust Staff Provident Fund"></a><nav class="main-nav" id="mainNav" aria-label="Main navigation"><details class="nav-dropdown" open><summary>About <span aria-hidden="true">⌄</span></summary><div class="nav-dropdown__menu"><a href="index.html#about">About the Fund</a><a href="index.html#governance">Governance</a><a href="trustees.html">Trustees</a><a href="service-providers.html" aria-current="page">Service providers</a><a href="strategy-2025-2030.html">Strategy 2025–2030</a></div></details><a href="index.html#services">Member support</a><a href="index.html#dashboard">Performance</a><a href="index.html#news">News</a><a href="downloads.html">Downloads Centre</a><a href="index.html#contact">Contact</a></nav><div class="nav-actions"><a class="button button--primary portal-button" href="index.html#portal">Member portal <span aria-hidden="true">↗</span></a><button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span><span class="visually-hidden">Open menu</span></button></div></div></header>
   <main id="main-content">
-    <section class="subpage-hero"><div class="container subpage-hero__grid"><div><div class="breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><a href="index.html#governance">Governance</a><span aria-hidden="true">/</span><span>Service providers</span></div><p class="overline">Our strategic pillars in practice</p><h1>Specialist capability that strengthens every decision.</h1><p>Independent expertise supports prudent investment, audit, risk and compliance, governance, and operations and service excellence.</p></div><aside class="subpage-hero__stamp"><strong>06+</strong><span>Professional disciplines working with integrity to safeguard members’ retirement.</span></aside></div></section>
-    <section class="subpage-section"><div class="container page-intro"><div><p class="overline overline--blue">Provider ecosystem</p><h2>Specialist advice, clear accountability.</h2></div><p>Provider names will be displayed once the Fund approves publication. The cards below explain the role each professional discipline performs within the Fund's governance structure.</p></div><div class="container provider-grid">
-      <article class="provider-card"><span class="provider-card__number">01</span><h3>Fund administrator</h3><p>Supports accurate records, member servicing, benefit processing and operational reporting.</p><small>Administration</small></article>
-      <article class="provider-card"><span class="provider-card__number">02</span><h3>Investment consultant</h3><p>Advises the Board on investment strategy, portfolio monitoring and performance evaluation.</p><small>Investment oversight</small></article>
-      <article class="provider-card"><span class="provider-card__number">03</span><h3>Fund manager</h3><p>Implements approved mandates with disciplined research, execution and reporting.</p><small>Portfolio management</small></article>
-      <article class="provider-card"><span class="provider-card__number">04</span><h3>Custodian</h3><p>Safeguards assets and provides independent custody, settlement and asset-reporting controls.</p><small>Asset custody</small></article>
-      <article class="provider-card"><span class="provider-card__number">05</span><h3>Actuary & auditor</h3><p>Provides actuarial insight and independent assurance over financial information and controls.</p><small>Assurance</small></article>
-      <article class="provider-card"><span class="provider-card__number">06</span><h3>Legal & compliance advisers</h3><p>Helps the Fund remain aligned with applicable obligations, policies and governance practice.</p><small>Compliance</small></article>
-    </div><div class="container provider-note">Provider appointments, mandates and contact details are subject to the Fund's formal governance and procurement processes. This page is an information overview, not a directory of approved service-provider contacts.</div></section>
+    <section class="subpage-hero providers-hero">
+      <div class="container providers-hero__grid">
+        <div class="providers-hero__copy">
+          <div class="breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Service providers</span></div>
+          <p class="overline">Fund governance</p>
+          <h1>Service providers</h1>
+          <p>Every member outcome is supported by an accountable network of experts—from administration and investment to custody and insurance.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="providers-network" id="provider-network">
+      <div class="container providers-network__intro">
+        <div><p class="overline overline--blue">The provider network</p><h2>Expertise at every link in the chain.</h2></div>
+        <p>Each organisation has a distinct mandate. Together, they create the checks, balances and specialist capability that help the Fund serve members responsibly.</p>
+      </div>
+      <div class="container provider-grid">
+        <article class="provider-card provider-card--lead">
+          <div class="provider-card__top"><span class="provider-card__number">01</span><span class="provider-card__role">Fund operations</span></div>
+          <div class="provider-card__logo provider-card__logo--zamara"><img src="assets/images/providers/zamara.png" alt="Zamara logo"></div>
+          <div class="provider-card__content"><h3>Zamara Actuaries, Administrators &amp; Consultants Limited</h3><p>Turns complex fund data into accurate administration, actuarial insight and informed investment decisions.</p><ul><li>Actuary</li><li>Administrator</li><li>Investment consultant</li></ul></div>
+        </article>
+        <article class="provider-card">
+          <div class="provider-card__top"><span class="provider-card__number">02</span><span class="provider-card__role">Grow</span></div>
+          <div class="provider-card__logo"><img src="assets/images/providers/old-mutual.png" alt="Old Mutual logo"></div>
+          <div class="provider-card__content"><h3>Old Mutual Investment Group</h3><p>Manages Fund assets with disciplined research, execution and reporting under approved mandates.</p><ul><li>Fund manager</li></ul></div>
+        </article>
+        <article class="provider-card">
+          <div class="provider-card__top"><span class="provider-card__number">03</span><span class="provider-card__role">Safeguard</span></div>
+          <div class="provider-card__logo"><img src="assets/images/providers/stanbic.png" alt="Stanbic Bank logo"></div>
+          <div class="provider-card__content"><h3>Stanbic Bank Ltd</h3><p>Safeguards Fund assets and provides independent custody, settlement and asset-reporting controls.</p><ul><li>Custodian</li></ul></div>
+        </article>
+        <article class="provider-card provider-card--insurance">
+          <div class="provider-card__top"><span class="provider-card__number">04</span><span class="provider-card__role">Protect</span></div>
+          <div class="provider-card__logo"><img src="assets/images/providers/jubilee.png" alt="Jubilee Group logo"></div>
+          <div class="provider-card__content"><h3>Jubilee Insurance Company Ltd</h3><p>Provides approved insurance cover that adds another layer of protection for Fund members.</p><ul><li>Insurer</li></ul></div>
+        </article>
+        <article class="provider-card provider-card--insurance provider-card--dark-logo">
+          <div class="provider-card__top"><span class="provider-card__number">05</span><span class="provider-card__role">Protect</span></div>
+          <div class="provider-card__logo"><img src="assets/images/providers/kenindia.webp" alt="Kenindia Assurance logo"></div>
+          <div class="provider-card__content"><h3>Kenindia Assurance Company Limited</h3><p>Provides approved insurance services that strengthen the Fund’s member protection framework.</p><ul><li>Insurer</li></ul></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="providers-assurance">
+      <div class="container providers-assurance__grid">
+        <div><p class="overline">Clear lines of responsibility</p><h2>Independent roles.<br>Shared accountability.</h2></div>
+        <div class="providers-assurance__steps">
+          <div><span>01</span><p><strong>Appointed with purpose</strong>Providers are selected for clearly defined professional mandates.</p></div>
+          <div><span>02</span><p><strong>Governed by oversight</strong>Performance and responsibilities remain subject to the Fund’s governance processes.</p></div>
+          <div><span>03</span><p><strong>Focused on members</strong>Every role ultimately contributes to the security and service members experience.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="providers-contact"><div class="container providers-contact__inner"><div><p class="overline overline--blue">Need clarity?</p><h2>Talk to the Fund Secretariat.</h2><p>For service enquiries or confirmation of provider responsibilities, our team will direct you to the right place.</p></div><a class="button button--primary" href="index.html#contact">Make an enquiry <span aria-hidden="true">↗</span></a></div></section>
   </main>
   <footer class="footer"><div class="container footer__bottom"><span>© <span id="currentYear">2026</span> Strathmore Educational Trust Staff Provident Fund.</span><a href="index.html">Return to the public information site</a></div></footer><script src="chatbot.js"></script><script src="subpage.js"></script>
   <script src="fund-ticker.js"></script>
