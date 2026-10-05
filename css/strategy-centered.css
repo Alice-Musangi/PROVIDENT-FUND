@@ -1,0 +1,154 @@
+/* Centre-aligned composition across the Strategy 2025-2030 page. */
+.strategy-page .subpage-hero__grid {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+}
+.strategy-page .subpage-hero h1,
+.strategy-page .subpage-hero p:not(.overline) {
+  margin-right: auto;
+  margin-left: auto;
+}
+.strategy-page .subpage-hero h1 {
+  max-width: 14ch;
+}
+.strategy-page .breadcrumb {
+  justify-content: center;
+}
+.strategy-page .strategy-glance__heading {
+  display: block;
+  max-width: 980px;
+  text-align: center;
+}
+.strategy-page .strategy-glance__heading .overline,
+.strategy-page .strategy-glance__heading h2,
+.strategy-page .strategy-glance__heading > p:last-child {
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+.strategy-page .strategy-glance__heading h2 {
+  margin-bottom: 1.4rem;
+}
+.strategy-page .strategy-purpose-grid {
+  text-align: center;
+}
+.strategy-page .strategy-vision-card,
+.strategy-page .strategy-mission-card {
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+}
+.strategy-page .strategy-mission-card {
+  grid-template-columns:1fr;
+  padding-right:clamp(2.2rem,4vw,4rem);
+}
+.strategy-page .strategy-mission-card::after {
+  width:100%;
+  border:0;
+  opacity:.14;
+}
+.strategy-page .strategy-vision-card h3,
+.strategy-page .strategy-mission-card h3 {
+  max-width: 22ch;
+  margin-right:auto;
+  margin-left:auto;
+}
+.strategy-page .strategy-vision-card .strategy-purpose-icon,
+.strategy-page .strategy-mission-card .strategy-purpose-icon {
+  margin-right:auto;
+  margin-left:auto;
+}
+.strategy-page .strategy-purpose-line {
+  right:0;
+  left:0;
+  margin:auto;
+}
+.strategy-page #strategy-pillars .page-intro {
+  display: block;
+  max-width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+.strategy-page #strategy-pillars .page-intro h2,
+.strategy-page #strategy-pillars .page-intro > p {
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+.strategy-page #strategy-pillars .page-intro h2 {
+  margin-bottom: 1.4rem;
+}
+.strategy-page .strategy-glance-pillars {
+  text-align:center;
+}
+.strategy-page .strategy-glance-pillar {
+  align-items:center;
+  text-align:center;
+}
+.strategy-page .strategy-glance-pillar details {
+  width:100%;
+  text-align:center;
+}
+.strategy-page .strategy-glance-pillar summary {
+  justify-content:center;
+  gap:.8rem;
+}
+.strategy-page .strategy-values {
+  display: block;
+  text-align: center;
+}
+.strategy-page .strategy-values ul {
+  justify-content:center;
+  margin-top:1.4rem;
+}
+.strategy-page .strategy-download__grid {
+  grid-template-columns: 1fr;
+  max-width: 980px;
+  text-align: center;
+}
+.strategy-page .strategy-download__grid > div > p:not(.overline) {
+  max-width: 720px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.strategy-page .strategy-download-card {
+  grid-template-columns:1fr;
+  justify-items:center;
+  text-align:center;
+}
+.strategy-page .strategy-download-card .button {
+  grid-column:auto;
+}
+.strategy-page .strategy-download-list {
+  display:grid;
+  width:100%;
+  gap:1rem;
+}
+.strategy-launch-gallery__head {
+  display: block;
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+.strategy-launch-gallery__head h2,
+.strategy-launch-gallery__head > p {
+  max-width: 760px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.strategy-launch-gallery__head > p {
+  margin-top:1rem;
+}
+@media (max-width: 560px) {
+  .strategy-page .strategy-mission-card {
+    padding-right:1.6rem;
+  }
+  .strategy-page .strategy-download-card {
+    text-align:center;
+  }
+}

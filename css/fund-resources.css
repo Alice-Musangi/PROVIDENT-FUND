@@ -1,0 +1,281 @@
+.fund-basics {
+  color: var(--ink);
+  background: #fff;
+}
+.fund-basics::before {
+  display: none;
+}
+.fund-basics > .shell {
+  width: calc(100% - clamp(32px,6vw,96px));
+  max-width: none;
+}
+.fund-resources__heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: end;
+  margin-bottom: clamp(3rem,5vw,5rem);
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(33,57,112,.16);
+}
+.fund-resources__heading h2 {
+  max-width: none;
+  margin: 0;
+  color: var(--blue-deep);
+  font-size: clamp(2rem,3.5vw,4rem);
+  white-space: nowrap;
+}
+.fund-resources__heading p {
+  max-width: 390px;
+  margin: 0;
+  color: var(--muted);
+  text-align: right;
+}
+.fund-resource-layout {
+  display: grid;
+  grid-template-columns: minmax(360px,.85fr) minmax(620px,1.15fr);
+  gap: clamp(3rem,7vw,8rem);
+  align-items: center;
+}
+.fund-device {
+  position: relative;
+  display: grid;
+  min-height: 535px;
+  place-items: center;
+}
+.fund-device::before {
+  position: absolute;
+  width: min(100%,570px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle,rgba(73,148,199,.18),rgba(73,148,199,0) 68%);
+  content: "";
+}
+.fund-device__frame {
+  position: relative;
+  z-index: 1;
+  width: min(330px,72vw);
+  aspect-ratio: .72;
+  padding: 13px;
+  border: 3px solid #343b37;
+  border-radius: 24px;
+  background: #131917;
+  box-shadow: 0 32px 45px rgba(23,38,68,.22),inset 0 0 0 2px #788078;
+  transform: perspective(900px) rotateY(5deg);
+  transition: transform .45s ease;
+}
+.fund-device:hover .fund-device__frame {
+  transform: perspective(900px) rotateY(0) translateY(-8px);
+}
+.fund-device__camera {
+  position: absolute;
+  z-index: 2;
+  top: 6px;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #54605a;
+  transform: translateX(-50%);
+}
+.fund-device__screen {
+  display: flex;
+  height: 100%;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 12px;
+  color: #fff;
+  background: linear-gradient(145deg,#172f67,#385cad);
+}
+.fund-device__screen::after {
+  position: absolute;
+  inset: 13px;
+  border-radius: 12px;
+  background: linear-gradient(120deg,rgba(255,255,255,.14),transparent 35%);
+  content: "";
+  pointer-events: none;
+}
+.fund-device__screen img {
+  position: relative;
+  z-index: 1;
+  width: 180px;
+  padding: .75rem;
+  background: #fff;
+}
+.fund-device__screen p {
+  position: relative;
+  z-index: 1;
+  margin: 2rem 0 1rem;
+  color: #dce6fa;
+  font: 600 clamp(1.4rem,2.5vw,2rem)/1.3 var(--font-display);
+}
+.fund-device__screen p strong {
+  color: #f3c86b;
+}
+.fund-device__screen span {
+  position: relative;
+  z-index: 1;
+  color: #afc0e2;
+  font: 700 .62rem var(--font-display);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.fund-device__shadow {
+  position: absolute;
+  z-index: 0;
+  bottom: 48px;
+  width: min(500px,90%);
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(23,38,68,.2);
+  filter: blur(18px);
+}
+.fund-resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: clamp(2.5rem,5vw,5rem) clamp(2rem,4vw,4rem);
+}
+.fund-resource-grid article {
+  position: relative;
+  padding-top: 1.25rem;
+  border-top: 3px solid #d7a246;
+}
+.fund-resource-number {
+  color: #a57a2d;
+  font: 700 .68rem var(--font-display);
+  letter-spacing: .12em;
+}
+.fund-resource-grid h3 {
+  margin: .75rem 0 1rem;
+  color: var(--blue-deep);
+  font-size: clamp(1.25rem,2vw,1.65rem);
+}
+.fund-resource-grid p {
+  min-height: 7em;
+  margin: 0 0 1.25rem;
+  color: #46546c;
+  font-size: .92rem;
+  line-height: 1.7;
+}
+.fund-resource-grid a {
+  display: inline-flex;
+  gap: .7rem;
+  align-items: center;
+  color: #d55b37;
+  font: 700 .86rem var(--font-display);
+  text-decoration: none;
+}
+.fund-resource-grid a > span {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 3px;
+  color: #fff;
+  background: #dc6846;
+  transition: transform .2s ease;
+}
+.fund-resource-grid a:hover > span {
+  transform: translateX(5px);
+}
+.fund-resources__note {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: clamp(3rem,5vw,5rem);
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(33,57,112,.16);
+}
+.fund-resources__note p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .75rem;
+}
+.fund-resources__note a {
+  flex: none;
+  color: var(--blue);
+  font: 700 .75rem var(--font-display);
+  text-decoration: none;
+}
+@media (max-width: 1100px) {
+  .fund-resources__heading h2 {
+    white-space: normal;
+  }
+  .fund-resource-layout {
+    grid-template-columns: minmax(300px,.7fr) minmax(0,1.3fr);
+    gap: 3rem;
+  }
+  .fund-device {
+    min-height: 460px;
+  }
+  .fund-device__frame {
+    width: 275px;
+  }
+  .fund-resource-grid {
+    gap: 2.5rem 2rem;
+  }
+  .fund-resource-grid p {
+    min-height: 0;
+  }
+}
+@media (max-width: 820px) {
+  .fund-resources__heading {
+    display: block;
+  }
+  .fund-resources__heading p {
+    margin-top: 1rem;
+    text-align: left;
+  }
+  .fund-resource-layout {
+    grid-template-columns: 1fr;
+  }
+  .fund-device {
+    min-height: 420px;
+  }
+  .fund-device__frame {
+    width: 250px;
+  }
+  .fund-device__shadow {
+    bottom: 25px;
+  }
+  .fund-resource-grid {
+    max-width: 680px;
+    margin-inline: auto;
+  }
+}
+@media (max-width: 560px) {
+  .fund-device {
+    min-height: 380px;
+  }
+  .fund-device__frame {
+    width: 220px;
+  }
+  .fund-device__screen {
+    padding: 1.3rem;
+  }
+  .fund-device__screen img {
+    width: 145px;
+  }
+  .fund-resource-grid {
+    grid-template-columns: 1fr;
+  }
+  .fund-resource-grid article {
+    padding-bottom: 1rem;
+  }
+  .fund-resources__note {
+    display: block;
+  }
+  .fund-resources__note a {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fund-device__frame,.fund-resource-grid a > span {
+    transition: none;
+  }
+  .fund-device:hover .fund-device__frame,.fund-resource-grid a:hover > span {
+    transform: none;
+  }
+}

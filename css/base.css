@@ -1,0 +1,291 @@
+/* Foundation: design tokens, reset and shared typography. */
+:root {
+  --blue: #385cad;
+  --blue-deep: #213970;
+  --red: #e43d30;
+  --gold: #cc9f53;
+  --gold-light: #f6d180;
+  --ink: #172033;
+  --muted: #5e6b80;
+  --paper: #f6f7fa;
+  --line: #d9dee8;
+  --white: #fff;
+  --shadow: 0 18px 45px rgba(25, 44, 83, .1);
+  --radius: 8px;
+  --font-display: "Outfit", sans-serif;
+  --font-body: "Roboto", Arial, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  color: var(--ink);
+  background: var(--white);
+  font: 400 16px/1.65 var(--font-body);
+}
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+h1, h2, h3, p {
+  margin-top: 0;
+}
+h1, h2, h3, h4, h5, h6, .overline, .eyebrow {
+  font-family: var(--font-display);
+  letter-spacing: -.025em;
+}
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.12;
+}
+h2 {
+  color: var(--blue-deep);
+  font-size: clamp(2rem, 3.8vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+h3 {
+  margin-bottom: .55rem;
+  font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.3;
+}
+h4 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+h5, h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+button, input, select, textarea {
+  font-family: var(--font-body);
+}
+/* Strathmore Foundation-aligned typography. Important declarations ensure
+legacy component styles cannot restore the previous typefaces. */
+body {
+  font-family: var(--font-body) !important;
+}
+p, li, input, select, textarea {
+  font-family: var(--font-body) !important;
+}
+h1, h2, h3, h4, h5, h6,
+button, summary, dt, dd, strong, b,
+.kicker, .overline, .eyebrow, .button, .text-link,
+.brand, .footer-brand, .footer__brand {
+  font-family: var(--font-display) !important;
+}
+button {
+  cursor: pointer;
+}
+.navigation > .nav-dropdown:nth-of-type(2) {
+  display: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+::selection {
+  color: var(--blue-deep);
+  background: var(--gold-light);
+}
+.container {
+  width: min(1180px, calc(100% - clamp(32px, 5vw, 64px)));
+  margin-inline: auto;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+.skip-link {
+  position: fixed;
+  z-index: 20;
+  top: 8px;
+  left: 8px;
+  padding: .65rem .85rem;
+  color: var(--white);
+  background: var(--blue-deep);
+  transform: translateY(-160%);
+  transition: transform .2s ease;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+.overline {
+  margin-bottom: 1rem;
+  color: rgba(255,255,255,.78);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.overline--blue {
+  color: var(--blue);
+}
+.overline--gold {
+  color: var(--gold);
+}
+.lead {
+  font-size: 1.18rem;
+  line-height: 1.65;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+/* Shared Fund performance ticker. */
+.fund-ticker {
+  border-top-color:#f6d180!important;
+  border-bottom-color:#f6d180!important;
+  color:#f6d180!important;
+  background:#e43d30!important;
+  box-shadow:0 6px 18px rgba(115,25,20,.22)!important;
+}
+.fund-ticker::before {
+  background:linear-gradient(90deg,#e43d30,transparent)!important;
+}
+.fund-ticker::after {
+  background:linear-gradient(270deg,#e43d30,transparent)!important;
+}
+.fund-ticker__label {
+  color:#f6d180!important;
+  background:rgba(91,20,20,.3)!important;
+  border:1px solid rgba(246,209,128,.55);
+}
+.fund-ticker__item {
+  color:#f6d180!important;
+  text-shadow:none!important;
+}
+.fund-ticker__item i {
+  border-color:#f6d180!important;
+  background:#f6d180!important;
+  box-shadow:0 0 0 4px rgba(246,209,128,.18)!important;
+}
+.fund-ticker {
+  position:relative;
+  overflow:hidden;
+  border-top:2px solid #f6d180;
+  border-bottom:2px solid #f6d180;
+  color:#fff;
+  background:linear-gradient(100deg,#152957 0%,#213970 45%,#385cad 100%);
+  box-shadow:0 6px 18px rgba(20,36,76,.2);
+}
+.fund-ticker::before,.fund-ticker::after {
+  position:absolute;
+  z-index:2;
+  top:0;
+  bottom:0;
+  width:55px;
+  content:"";
+  pointer-events:none;
+}
+.fund-ticker::before {
+  left:0;
+  background:linear-gradient(90deg,#152957,transparent);
+}
+.fund-ticker::after {
+  right:0;
+  background:linear-gradient(270deg,#385cad,transparent);
+}
+.fund-ticker__track {
+  display:flex;
+  width:max-content;
+  will-change:transform;
+  animation:fund-ticker-scroll 34s linear infinite;
+}
+.fund-ticker__set {
+  display:flex;
+  flex:none;
+  align-items:center;
+  min-width:100vw;
+}
+.fund-ticker__label {
+  flex:none;
+  margin-left:1rem;
+  padding:.35rem .75rem;
+  border-radius:999px;
+  color:#213970;
+  background:#f6d180;
+  font:800 .62rem var(--font-display);
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  box-shadow:0 3px 10px rgba(0,0,0,.18);
+}
+.fund-ticker__item {
+  display:inline-flex;
+  align-items:center;
+  gap:.7rem;
+  flex:none;
+  padding:.58rem clamp(1.5rem,4vw,3.5rem);
+  white-space:nowrap;
+  font:700 .76rem var(--font-display);
+  letter-spacing:.015em;
+  text-shadow:0 1px 2px rgba(0,0,0,.25);
+}
+.fund-ticker__item i {
+  width:8px;
+  height:8px;
+  flex:none;
+  border:2px solid rgba(255,255,255,.65);
+  border-radius:50%;
+  background:#e43d30;
+  box-shadow:0 0 0 4px rgba(228,61,48,.18),0 0 10px rgba(228,61,48,.75);
+}
+.fund-ticker:hover .fund-ticker__track,.fund-ticker:focus-within .fund-ticker__track {
+  animation-play-state:paused;
+}
+@keyframes fund-ticker-scroll {
+  to {
+    transform:translateX(-50%);
+  }
+}
+@media(max-width:500px) {
+  .fund-ticker__label {
+    margin-left:.7rem;
+    padding:.3rem .6rem;
+    font-size:.55rem;
+  }
+  .fund-ticker__item {
+    gap:.55rem;
+    padding:.5rem 1.5rem;
+    font-size:.68rem;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .fund-ticker__track {
+    animation:none;
+    width:100%;
+    overflow-x:auto;
+  }
+  .fund-ticker__set[aria-hidden="true"] {
+    display:none;
+  }
+}

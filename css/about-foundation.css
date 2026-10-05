@@ -1,0 +1,349 @@
+/* Foundation-inspired editorial flow, populated with SETSPF content. */
+.about-page main {
+  display:flex;
+  flex-direction:column;
+}
+.about-hero {
+  order:1;
+  min-height:min(720px,78vh);
+  display:flex;
+  align-items:center;
+  padding:clamp(4.5rem,8vw,7.5rem) 0;
+  background:#213970;
+}
+.about-hero:after {
+  background:linear-gradient(96deg,rgba(20,42,91,.98) 0%,rgba(33,57,112,.86) 49%,rgba(33,57,112,.2) 100%);
+}
+.about-hero__grid {
+  grid-template-columns:.9fr 1.1fr;
+  gap:clamp(2.5rem,6vw,6rem);
+}
+.about-hero h1 {
+  font-size:clamp(3.3rem,6.5vw,6.2rem);
+  line-height:.96;
+  letter-spacing:-.055em;
+}
+.about-hero__image {
+  position:relative;
+  min-height:430px;
+  background-image:linear-gradient(rgba(15,33,72,.06),rgba(15,33,72,.15)),url("../assets/images/hero-member-consultation.png");
+  border-radius:2px;
+  box-shadow:0 24px 60px rgba(4,18,50,.3);
+}
+.about-hero__image span {
+  position:absolute;
+  right:-1px;
+  bottom:-1px;
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+  padding:1rem 1.2rem;
+  color:#213970;
+  background:#f6d180;
+  font:800 clamp(2.2rem,5vw,4rem)/1 var(--font-display);
+}
+.about-hero__image small {
+  width:126px;
+  font-size:.65rem;
+  line-height:1.25;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.about-guiding {
+  order:2;
+}
+.about-guiding h2 {
+  font-size:clamp(2.5rem,5vw,4.7rem);
+  line-height:1;
+}
+.stand-for {
+  order:3;
+}
+.chair-message {
+  order:4;
+  padding:0;
+  background:#f5f7fb;
+}
+.chair-message__grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:560px;
+}
+.chair-message__image {
+  margin-left:calc((100vw - min(1180px,calc(100vw - clamp(32px,5vw,64px)))) / -2);
+  background:center/cover url("../assets/images/strategy-launch-speaker-one.jpg");
+}
+.chair-message blockquote {
+  align-self:center;
+  margin:0;
+  padding:clamp(3rem,7vw,7rem);
+  padding-right:0;
+}
+.chair-message blockquote h2 {
+  font-size:clamp(2.4rem,4.7vw,4.6rem);
+  line-height:1.04;
+}
+.chair-message blockquote>p:not(.kicker) {
+  color:var(--muted);
+  font-size:1.08rem;
+}
+.chair-message footer {
+  display:grid;
+  margin-top:2rem;
+}
+.chair-message footer strong {
+  color:var(--blue-deep);
+}
+.chair-message footer span {
+  color:var(--muted);
+  font-size:.8rem;
+}
+.about-story {
+  order:5;
+  color:#fff;
+  background:#213970;
+}
+.about-story h2,.about-story h3 {
+  color:#fff;
+}
+.about-story .kicker {
+  color:#f6d180;
+}
+.about-story__lead {
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:clamp(3rem,9vw,9rem);
+  margin-bottom:4rem;
+}
+.about-story__lead h2 {
+  max-width:530px;
+  font-size:clamp(2.6rem,5vw,4.8rem);
+  line-height:1;
+}
+.about-story__lead p {
+  color:#dce6ff;
+}
+.about-journey {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid rgba(255,255,255,.25);
+}
+.about-journey article {
+  position:relative;
+  padding:2rem 1.3rem 0 0;
+}
+.about-journey article+article {
+  padding-left:1.3rem;
+  border-left:1px solid rgba(255,255,255,.2);
+}
+.about-journey article:before {
+  position:absolute;
+  top:-6px;
+  left:0;
+  width:11px;
+  height:11px;
+  border-radius:50%;
+  background:#f6d180;
+  content:"";
+}
+.about-journey article+article:before {
+  left:1.3rem;
+}
+.about-journey span {
+  color:#f6d180;
+  font:800 .8rem var(--font-display);
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.about-journey h3 {
+  margin:1rem 0 .55rem;
+  font-size:1.08rem;
+}
+.about-journey p {
+  color:#cbd8f1;
+  font-size:.8rem;
+}
+.about-attention {
+  order:6;
+  background:#fff;
+}
+.strategy-intro {
+  display:grid;
+  grid-template-columns:1fr .8fr;
+  gap:4rem;
+  align-items:end;
+  margin-bottom:3rem;
+}
+.strategy-intro h2 {
+  max-width:650px;
+  margin-bottom:0;
+  font-size:clamp(2.5rem,5vw,4.5rem);
+  line-height:1;
+}
+.strategy-intro>p {
+  color:var(--muted);
+}
+.strategy-pillars {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  border-top:1px solid var(--line);
+  border-left:1px solid var(--line);
+}
+.strategy-pillars article {
+  min-height:250px;
+  padding:1.4rem;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  transition:background .25s,color .25s,transform .25s;
+}
+.strategy-pillars article:hover {
+  position:relative;
+  z-index:1;
+  color:#fff;
+  background:#e43d30;
+  transform:translateY(-5px);
+}
+.strategy-pillars b {
+  color:#cc9f53;
+  font-size:.7rem;
+}
+.strategy-pillars h3 {
+  margin:2rem 0 .7rem;
+  font-size:1rem;
+}
+.strategy-pillars p {
+  margin:0;
+  color:var(--muted);
+  font-size:.78rem;
+}
+.strategy-pillars article:hover h3,.strategy-pillars article:hover p,.strategy-pillars article:hover b {
+  color:#fff;
+}
+.strategy-link {
+  display:inline-flex;
+  margin-top:1.5rem;
+}
+.who-we-serve {
+  order:7;
+  background:#f5f7fb;
+}
+.about-governance {
+  order:8;
+}
+.about-faq-link {
+  order:9;
+}
+.about-cta {
+  order:10;
+}
+@media(max-width:900px) {
+  .chair-message__grid,.about-story__lead,.strategy-intro {
+    grid-template-columns:1fr;
+  }
+  .chair-message__image {
+    min-height:420px;
+    margin-inline:calc((100vw - min(1180px,calc(100vw - clamp(32px,5vw,64px)))) / -2);
+  }
+  .chair-message blockquote {
+    padding:3rem 0;
+  }
+  .about-journey {
+    grid-template-columns:1fr 1fr;
+  }
+  .strategy-pillars {
+    grid-template-columns:1fr 1fr;
+  }
+  .about-hero {
+    min-height:auto;
+  }
+  .about-hero__image {
+    min-height:330px;
+  }
+}
+@media(max-width:560px) {
+  .about-hero__grid {
+    grid-template-columns:1fr;
+  }
+  .about-hero h1 {
+    font-size:3.15rem;
+  }
+  .about-hero__image {
+    min-height:270px;
+  }
+  .chair-message__image {
+    min-height:300px;
+  }
+  .about-journey,.strategy-pillars {
+    grid-template-columns:1fr;
+  }
+  .about-journey article,.about-journey article+article {
+    padding:1.5rem 0;
+    border-left:0;
+    border-bottom:1px solid rgba(255,255,255,.2);
+  }
+  .about-journey article:before,.about-journey article+article:before {
+    display:none;
+  }
+  .strategy-pillars article {
+    min-height:0;
+  }
+}
+.chair-message__image {
+  background-image:url("../assets/images/chairperson-dr-freshia-mugo-waweru.jpg");
+  background-position:center 30%;
+  transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .7s ease;
+}
+.chair-message__grid:hover .chair-message__image {
+  filter:saturate(1.05);
+  transform:scale(1.015);
+}
+.about-journey article,.strategy-pillars article {
+  cursor:default;
+}
+.about-journey article {
+  transition:background-color .25s ease,transform .25s ease;
+}
+.about-journey article:hover {
+  background:rgba(255,255,255,.055);
+  transform:translateY(-4px);
+}
+.about-journey article:hover:before {
+  box-shadow:0 0 0 7px rgba(246,209,128,.16);
+}
+.about-motion-ready .about-guiding .about-intro>*,.about-motion-ready .stand-for .purpose-card,.about-motion-ready .chair-message__grid>*,.about-motion-ready .about-story__lead>*,.about-motion-ready .about-journey article,.about-motion-ready .strategy-intro>*,.about-motion-ready .strategy-pillars article,.about-motion-ready .who-we-serve__intro>*,.about-motion-ready .family-logo-card,.about-motion-ready .about-governance__grid>* {
+  opacity:1;
+  transform:none;
+  transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.2,1);
+}
+.about-motion-ready .about-reveal-visible .about-intro>*,.about-motion-ready .about-reveal-visible .purpose-card,.about-motion-ready .about-reveal-visible .chair-message__grid>*,.about-motion-ready .about-reveal-visible .about-story__lead>*,.about-motion-ready .about-reveal-visible .about-journey article,.about-motion-ready .about-reveal-visible .strategy-intro>*,.about-motion-ready .about-reveal-visible .strategy-pillars article,.about-motion-ready .about-reveal-visible .who-we-serve__intro>*,.about-motion-ready .about-reveal-visible .family-logo-card,.about-motion-ready .about-reveal-visible .about-governance__grid>* {
+  opacity:1;
+  transform:none;
+}
+.about-reveal-visible .about-journey article:nth-child(2),.about-reveal-visible .strategy-pillars article:nth-child(2),.about-reveal-visible .family-logo-card:nth-child(2) {
+  transition-delay:.08s;
+}
+.about-reveal-visible .about-journey article:nth-child(3),.about-reveal-visible .strategy-pillars article:nth-child(3),.about-reveal-visible .family-logo-card:nth-child(3) {
+  transition-delay:.16s;
+}
+.about-reveal-visible .about-journey article:nth-child(4),.about-reveal-visible .strategy-pillars article:nth-child(4),.about-reveal-visible .family-logo-card:nth-child(4) {
+  transition-delay:.24s;
+}
+.about-reveal-visible .strategy-pillars article:nth-child(5),.about-reveal-visible .family-logo-card:nth-child(5) {
+  transition-delay:.32s;
+}
+.about-reveal-visible .family-logo-card:nth-child(6) {
+  transition-delay:.4s;
+}
+@media(prefers-reduced-motion:reduce) {
+  .chair-message__image,.about-journey article {
+    transition:none!important;
+  }
+  .chair-message__grid:hover .chair-message__image,.about-journey article:hover {
+    transform:none;
+  }
+  .about-motion-ready [class*="about-"],.about-motion-ready .purpose-card,.about-motion-ready .family-logo-card,.about-motion-ready .strategy-pillars article {
+    opacity:1!important;
+    transform:none!important;
+    transition:none!important;
+  }
+}

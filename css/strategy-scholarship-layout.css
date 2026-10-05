@@ -1,0 +1,233 @@
+/* Strategy page following the editorial flow of the SUF Scholarships page. */
+.strategy-page .subpage-hero {
+  min-height:clamp(500px,68vh,760px);
+  display:flex;
+  align-items:flex-end;
+  padding:clamp(4rem,8vw,7rem) 0;
+  background-image:linear-gradient(0deg,rgba(18,42,94,.94) 0%,rgba(33,57,112,.72) 48%,rgba(33,57,112,.12) 100%),url("../assets/images/strategy-launch-group.jpg");
+  background-position:center 42%;
+}
+.strategy-page .subpage-hero__grid {
+  width:min(1380px,calc(100% - clamp(32px,6vw,96px)));
+  min-height:0;
+  grid-template-columns:minmax(0,850px);
+  align-items:end;
+}
+.strategy-page .subpage-hero__stamp {
+  display:none;
+}
+.strategy-page .subpage-hero h1 {
+  max-width:12ch;
+  margin-bottom:1.2rem;
+  font-size:clamp(3.4rem,7.4vw,7.5rem);
+  line-height:.9;
+  letter-spacing:-.06em;
+}
+.strategy-page .subpage-hero p:not(.overline) {
+  max-width:720px;
+  font-size:1.05rem;
+}
+.strategy-page .strategy-glance {
+  padding:clamp(4.5rem,8vw,8rem) 0;
+  background:#fff;
+}
+.strategy-page .strategy-glance__heading {
+  display:grid;
+  max-width:1380px;
+  grid-template-columns:.72fr 1.28fr;
+  gap:clamp(2rem,8vw,8rem);
+  align-items:start;
+  margin-bottom:clamp(3rem,6vw,5rem);
+  text-align:left;
+}
+.strategy-page .strategy-glance__heading .overline {
+  grid-column:1;
+  margin:.6rem 0;
+  color:var(--red);
+  font-size:.92rem;
+  letter-spacing:0;
+  text-transform:none;
+}
+.strategy-page .strategy-glance__heading h2 {
+  grid-column:1;
+  margin:0;
+  color:#090d17;
+  font-size:clamp(2.8rem,5.5vw,5.5rem);
+  line-height:.96;
+}
+.strategy-page .strategy-glance__heading>p:last-child {
+  grid-column:2;
+  grid-row:1 / span 2;
+  max-width:760px;
+  margin:.4rem 0 0;
+  color:#24334e;
+  font:500 clamp(1.15rem,2vw,1.65rem)/1.55 var(--font-display);
+}
+.strategy-page .strategy-glance-document {
+  width:min(1380px,calc(100% - clamp(32px,6vw,96px)));
+  max-width:none;
+  margin-bottom:clamp(3rem,6vw,5rem);
+  overflow:hidden;
+  border-radius:30px;
+  background:#213970;
+  box-shadow:none;
+}
+.strategy-page .strategy-glance-document img {
+  width:100%;
+  max-height:650px;
+  object-fit:contain;
+  background:#f7f8fb;
+}
+.strategy-page .strategy-glance-document figcaption {
+  display:none;
+}
+.strategy-page .strategy-purpose-grid {
+  width:min(1380px,calc(100% - clamp(32px,6vw,96px)));
+  max-width:none;
+  grid-template-columns:1fr 1fr;
+  gap:1.5rem;
+}
+.strategy-page .strategy-vision-card,.strategy-page .strategy-mission-card {
+  min-height:430px;
+  border-radius:30px;
+}
+.strategy-page .strategy-vision-card {
+  background-image:linear-gradient(90deg,rgba(33,57,112,.98),rgba(33,57,112,.72)),url("../assets/images/strategy-vision.jpg");
+}
+.strategy-page .strategy-mission-card {
+  border:0;
+  padding:clamp(2.2rem,4vw,4rem);
+  padding-right:43%;
+  background:#4794c7;
+}
+.strategy-page .strategy-mission-card h3,.strategy-page .strategy-mission-card .overline {
+  color:#fff;
+}
+.strategy-page .strategy-mission-card::after {
+  border:0;
+  background-image:linear-gradient(rgba(33,57,112,.05),rgba(33,57,112,.18)),url("../assets/images/strategy-mission.jpg");
+}
+.strategy-page #strategy-pillars {
+  padding:clamp(4.5rem,8vw,8rem) clamp(16px,4vw,64px);
+  background:#fff;
+}
+.strategy-page #strategy-pillars>.container {
+  width:100%;
+  max-width:1380px;
+}
+.strategy-page #strategy-pillars .page-intro {
+  display:grid;
+  grid-template-columns:.72fr 1.28fr;
+  gap:clamp(2rem,8vw,8rem);
+  align-items:start;
+  margin-bottom:4rem;
+}
+.strategy-page #strategy-pillars .page-intro .overline {
+  color:var(--red);
+  font-size:.92rem;
+  letter-spacing:0;
+  text-transform:none;
+}
+.strategy-page #strategy-pillars .page-intro h2 {
+  max-width:640px;
+  color:#090d17;
+  font-size:clamp(2.8rem,5.5vw,5.5rem);
+  line-height:.96;
+}
+.strategy-page #strategy-pillars .page-intro>p {
+  max-width:760px;
+  margin-top:.4rem;
+  color:#24334e;
+  font:500 clamp(1.05rem,1.7vw,1.35rem)/1.6 var(--font-display);
+}
+.strategy-page .strategy-glance-pillars {
+  grid-template-columns:repeat(5,minmax(240px,1fr));
+  max-width:none;
+  overflow-x:auto;
+  scroll-snap-type:x proximity;
+  padding:0 0 1.2rem;
+}
+.strategy-page .strategy-glance-pillar {
+  min-height:380px;
+  scroll-snap-align:start;
+  border-radius:24px;
+  box-shadow:none;
+}
+.strategy-page .strategy-glance-pillar:hover {
+  color:#fff;
+  border-color:#4794c7;
+  background:#4794c7;
+}
+.strategy-page .strategy-glance-pillar:hover h3,.strategy-page .strategy-glance-pillar:hover p,.strategy-page .strategy-glance-pillar:hover summary,.strategy-page .strategy-glance-pillar:hover .pillar-number {
+  color:#fff;
+}
+.strategy-page .strategy-values {
+  max-width:none;
+  border-radius:24px;
+}
+.strategy-page .strategy-download {
+  padding:clamp(4.5rem,8vw,7rem) clamp(16px,4vw,64px);
+  background:#f6f7fa;
+}
+.strategy-page .strategy-download__grid {
+  width:100%;
+  max-width:1380px;
+  grid-template-columns:.85fr 1.15fr;
+}
+.strategy-page .strategy-download__grid h2 {
+  color:#090d17;
+  font-size:clamp(2.5rem,4.5vw,4.5rem);
+  line-height:1;
+}
+.strategy-page .strategy-download-card {
+  border-radius:24px;
+}
+.strategy-launch-gallery {
+  padding:clamp(4.5rem,8vw,7rem) clamp(16px,4vw,64px);
+  background:#fff;
+}
+.strategy-launch-gallery>.container {
+  width:100%;
+  max-width:1380px;
+}
+.strategy-launch-gallery__head h2 {
+  color:#090d17;
+  font-size:clamp(2.5rem,4.5vw,4.5rem);
+  line-height:1;
+}
+.strategy-launch-gallery figure {
+  border-radius:22px;
+}
+@media(max-width:800px) {
+  .strategy-page .strategy-glance__heading,.strategy-page #strategy-pillars .page-intro {
+    grid-template-columns:1fr;
+    gap:1.2rem;
+  }
+  .strategy-page .strategy-glance__heading .overline,.strategy-page .strategy-glance__heading h2,.strategy-page .strategy-glance__heading>p:last-child {
+    grid-column:1;
+    grid-row:auto;
+  }
+  .strategy-page .strategy-purpose-grid {
+    grid-template-columns:1fr;
+  }
+  .strategy-page .strategy-download__grid {
+    grid-template-columns:1fr;
+  }
+}
+@media(max-width:560px) {
+  .strategy-page .subpage-hero h1 {
+    font-size:3.35rem;
+  }
+  .strategy-page .strategy-glance-document,.strategy-page .strategy-vision-card,.strategy-page .strategy-mission-card {
+    border-radius:20px;
+  }
+  .strategy-page .strategy-mission-card {
+    padding-right:1.6rem;
+  }
+  .strategy-page .strategy-glance-pillars {
+    grid-template-columns:repeat(5,minmax(82vw,1fr));
+  }
+  .strategy-page .strategy-glance-pillar {
+    min-height:340px;
+  }
+}

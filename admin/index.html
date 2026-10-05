@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>SETSPF Content Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&amp;family=Roboto:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="admin.css">
+  </head>
+  <body>
+    <main>
+      <section class="login" id="loginView">
+        <div class="login__brand">
+          <img src="../assets/images/fund-logo-source.png" alt="SETSPF">
+          <p>Content Manager</p>
+        </div>
+        <form id="loginForm">
+          <p class="eyebrow">Secure staff access</p>
+          <h1>Welcome back.</h1>
+          <p>Sign in with your Administrator or Trustee account.</p>
+          <label>
+            Email address
+            <input name="email" type="email" autocomplete="username" required>
+          </label>
+          <label>
+            Password
+            <input name="password" type="password" autocomplete="current-password" required>
+          </label>
+          <button type="submit">Sign in</button>
+          <p class="message" id="loginMessage" role="alert"></p>
+        </form>
+      </section>
+
+      <section class="workspace" id="workspace" hidden>
+        <aside>
+          <img src="../assets/images/fund-logo-source.png" alt="SETSPF">
+          <strong>Content Manager</strong>
+          <nav>
+            <button class="is-active" data-view="content">Content</button>
+            <button data-view="editor">Create new</button>
+            <button data-view="audit" data-admin-only>Activity log</button>
+            <a href="../index.html" target="_blank">View website ↗</a>
+          </nav>
+          <div class="account">
+            <span id="accountName"></span>
+            <small id="accountRole"></small>
+            <button id="logoutButton">Sign out</button>
+          </div>
+        </aside>
+
+        <div class="main-panel">
+          <header>
+            <div>
+              <p class="eyebrow">SETSPF publishing</p>
+              <h1 id="viewTitle">Content</h1>
+            </div>
+            <button class="primary" data-open-editor>Create content</button>
+          </header>
+
+          <section id="contentView">
+            <div class="toolbar">
+              <input id="contentSearch" type="search" placeholder="Search content">
+              <select id="contentFilter">
+                <option value="all">All content</option>
+                <option value="news">News</option>
+                <option value="faq">FAQs</option>
+                <option value="document">Documents</option>
+                <option value="trustee">Trustees</option>
+                <option value="provider">Service providers</option>
+                <option value="page">Pages</option>
+              </select>
+            </div>
+            <div class="content-list" id="contentList"></div>
+          </section>
+
+          <section id="editorView" hidden>
+            <form class="editor" id="editorForm">
+              <div class="editor__head">
+                <div>
+                  <p class="eyebrow">New entry</p>
+                  <h2>Create content</h2>
+                </div>
+                <span>Public website content only</span>
+              </div>
+              <div class="fields">
+                <label>
+                  Content type
+                  <select name="type" required>
+                    <option value="news">News</option>
+                    <option value="faq">FAQ</option>
+                    <option value="document">Document</option>
+                    <option value="trustee">Trustee</option>
+                    <option value="provider">Service provider</option>
+                    <option value="page">Page content</option>
+                  </select>
+                </label>
+                <label>
+                  Title
+                  <input name="title" required maxlength="180">
+                </label>
+                <label>
+                  URL name
+                  <input name="slug" required pattern="[a-z0-9-]+" placeholder="annual-general-meeting">
+                </label>
+                <label class="full">
+                  Summary
+                  <textarea name="summary" rows="3" maxlength="500"></textarea>
+                </label>
+                <label class="full">
+                  Body
+                  <textarea name="body" rows="12"></textarea>
+                </label>
+                <label id="statusField">
+                  Save as
+                  <select name="status">
+                    <option value="draft">Draft</option>
+                    <option value="review">Ready for review</option>
+                    <option value="published">Publish now</option>
+                  </select>
+                </label>
+              </div>
+              <div class="form-actions">
+                <button type="button" class="secondary" data-view="content">Cancel</button>
+                <button type="submit" class="primary">Save content</button>
+              </div>
+              <p class="message" id="editorMessage" role="status"></p>
+            </form>
+          </section>
+
+          <section id="auditView" hidden>
+            <div class="content-list" id="auditList"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <script src="admin.js"></script>
+  </body>
+</html>

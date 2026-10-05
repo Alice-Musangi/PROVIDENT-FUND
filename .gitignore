@@ -5,6 +5,13 @@
 # Generated previews and downloaded reference pages
 tmp/
 
+# Local CMS database and secrets
+data/
+.env
+*.pyc
+*.pyo
+__pycache__/
+
 # Operating-system files
 Thumbs.db
 .DS_Store
